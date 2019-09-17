@@ -1,0 +1,14 @@
+#container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+#toolbar {
+}
+#toolbar i {
+  color: blue;
+}
+#map {
+  flex-grow : 1;
+}
