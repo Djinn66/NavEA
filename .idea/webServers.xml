@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="71c1f703-865b-47e8-ae75-ad3ce5528df5" name="alwaysdata (project level)" url="http://navea.djinn66.tk">
+        <fileTransfer host="ssh-arpdjin.alwaysdata.net" port="22" rootFolder="/home/arpdjin" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
