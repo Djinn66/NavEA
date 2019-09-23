@@ -4,6 +4,12 @@ var projection = new ol.proj.Projection({
 	units: 'pixels',
 	extent: extent
 });
+var extentN6 =  [569291.6855859251,5406732.215851516 , 569366.0780807086,5406785.3331150925 ];//w=3551,h=2938
+var projectionN6 = new ol.proj.Projection({
+	code: 'xkcd-image',
+	units: 'pixels',
+	extent: extentN6
+});
 
 var localMap = new ol.Map({
 	target: 'map',
@@ -11,32 +17,23 @@ var localMap = new ol.Map({
 
 		new ol.layer.Tile({
 			source: new ol.source.OSM()
-		}),/*
+		}),
 		new ol.layer.Image({
-			extent: [-13884991, 2870341, -7455066, 6338219],
-			source: new ol.source.ImageWMS({
-				url: 'https://ahocevar.com/geoserver/wms',
-				params: {'LAYERS': 'topp:states'},
-				ratio: 1,
-				serverType: 'geoserver'
-			})
-		})*/
-
-		/*
-		new ol.layer.Tile({
-			source: new ol.source.OSM(),
-			zIndex: 0
-		}),*/
+				source: new ol.source.ImageStatic({
+					attributions: '',
+					url: 'img/BDE_rdc.png',
+					projection: projection,
+					imageExtent: extent,
+				}),
+			}),
 		new ol.layer.Image({
-			source: new ol.source.ImageStatic({
-				attributions: '',
-				url: 'img/BDE_rdc.png',
-				projection: projection,
-				imageExtent: extent,
+				source: new ol.source.ImageStatic({
+					attributions: '',
+					url: 'img/N6.png',
+					projection: projectionN6,
+					imageExtent: extentN6,
+				}),
 			})
-			//minResolution: 18,
-
-		})
 
 	],
 	view: new ol.View({
